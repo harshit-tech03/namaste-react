@@ -121,3 +121,35 @@ Since this folder often has a massive size, we should not commit it inside the G
 => Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. The browserslist configuration controls the outputted JavaScript so that the emitted code will be compatible with the browsers specified.
 
 
+
+Episode 3 ----------------------------------------------------------------
+
+1. What is JSX ?
+=> JSX is a syntax extension to JavaScript. It allows us to write HTML-like or XML-like code in our React applications which makes it more readable, understandable and maintainable.
+JSX ultimately gets transpiled to React.createElement, which is nothing but a JavaScript object and which gets converted to HTML element when it gets rendered to the DOM.
+
+2. Superpowers of JSX
+=> JSX is not necessary for writing React code, but it makes our React development much easier. It allows us to write HTML-like or XML-like code in our React applications, instead of React.createElement and it makes our code more readable, understandable and maintainable.
+
+3. Role of 'type' attribute in the script tag ? What options can I use there ?
+=> This attribute indicates the type of script represented. The value of this attribute will be one of the following:
+
+    a. Attribute is not set (default), an empty string, or a JavaScript MIME type
+        Indicates that the script is a "classic script", containing JavaScript code. Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type. JavaScript MIME types are listed in the IANA media types specification.
+
+    b. module
+        This value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. For information on using module, see our JavaScript modules guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
+
+    c. importmap
+        This value indicates that the body of the element contains an import map. The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing JavaScript modules.
+
+    d. Any other value
+        The embedded content is treated as a data block, and won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. All of the other attributes will be ignored, including the src attribute.
+
+4. {TitleComponent} vs <TitleComponent /> vs <TitleComponent></TitleComponent> in JSX
+=> {TitleComponent} : This means that {TitleComponent} is a variable that returns React elements.
+{} : This means that it is a Functional component which is just a normal javascript function that returns some JSX.
+{} : This is equivalent to {} when the component does not have any Child Component. The opening and closing tags are used to include Child component.
+
+
+Episode 4---------------------------------------------------------
